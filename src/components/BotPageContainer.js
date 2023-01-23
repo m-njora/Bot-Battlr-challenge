@@ -2,15 +2,16 @@ import React, {useEffect, useState } from "react";
 import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
 
-const url = "http://localhost:8001/bots"
+
+const url = "http://localhost:3000/bots"
 
 function BotPageContainer(){
     const [bots, setBots]= useState([])
     const [army, setArmy]= useState([])
 
     function enlist(bot) {
-        if (army.includes(bot)) return;
-        setArmy((army) => [...army, bot]);
+        if (army.includes(bot)) 
+        return;setArmy((army) => [...army, bot]);
       }
       function retire(bot) {
         setArmy((army) => army.filter((it) => it.id !== bot.id));
@@ -28,17 +29,17 @@ function BotPageContainer(){
           setBots((bots) => bots.filter((it) => it.id !== bot.id));
           setArmy((army) => army.filter((it) => it.id !== bot.id));
         });
-      }
+      } 
     
-      function deleteHandler() {
-        return (
-            <div>
-              <YourBotArmy collection={army} clickHandler={retire} handleDelete={handleDelete} />
-              <BotCollection collection={bots} clickHandler={enlist} handleDelete={handleDelete} />
-            </div>
-          );
-        }
-      }
+      
+    return (
+        <div>
+          <YourBotArmy collection={army} clickHandler={retire} handleDelete={handleDelete} />
+          <BotCollection collection={bots} clickHandler={enlist} handleDelete={handleDelete} />
+        </div>
+        );
+     }
+      
       
     
     
