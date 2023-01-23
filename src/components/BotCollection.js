@@ -8,7 +8,11 @@ function BotCollection({ collection, clickHandler, handleDelete }) {
         {"Bot Collection click on a bot to add it to your army."}
         <div className="row">
           {collection.map((bot) => (
-            <BotCard key={bot.id} bot={bot} clickHandler={clickHandler} handleDelete={handleDelete} />
+            <BotCard 
+            key={bot.id} 
+            bot={bot} 
+            clickHandler={clickHandler} 
+            handleDelete={handleDelete} />
           ))}
         </div>
       </div>

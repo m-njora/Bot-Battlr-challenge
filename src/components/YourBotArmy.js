@@ -4,7 +4,7 @@ import BotCard from "./BotCard";
 //bots thatt have been selected by the user
 function YourBotArmy({collection,clickHandler, deleteHandler }){
     return(
-        <div className="ui segment inverted olive bot-army">
+        <div className="ui segment inverted teal bot-army">
             <div className=" ui five column grid">
             {"Click on a bot to add it to your army"}
                <div className="bot-army-row">
@@ -13,7 +13,7 @@ function YourBotArmy({collection,clickHandler, deleteHandler }){
                 key={bot.id} 
                 bot={bot} 
                 clickHandler={clickHandler}
-                 deleteHandler={deleteHandler}/>
+                deleteHandler={deleteHandler}/>
                 ))}   
                 </div>
             </div>
