@@ -3,7 +3,7 @@ import YourBotArmy from "./YourBotArmy";
 import BotCollection from "./BotCollection";
 
 
-const url = "http://localhost:3000/bots"
+const url = "https://vercel-json-server-two.vercel.app/bots"
 
 function BotPageContainer(){
     const [bots, setBots]= useState([])
